@@ -1,5 +1,10 @@
-function greet(name) {
-    return `Hello, ${name}!`;
+function greet(name, language = "en") {
+  if (language === "es") {
+      return `¡Hola, ${name}!`;
+  } else if (language === "fr") {
+      return `Bonjour, ${name}!`;
   }
-  
-  console.log(greet("World"));
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("World", "es"));
